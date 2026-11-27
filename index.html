@@ -176,13 +176,11 @@ body{background:var(--bg);position:relative}
 #amb .a-art{position:absolute;left:0;right:0;top:0;height:78vh;background:var(--amb) var(--ambp,center 20%)/cover;opacity:var(--amb-art);filter:var(--artf) saturate(1.1);-webkit-mask-image:linear-gradient(180deg,#000 10%,transparent 92%);mask-image:linear-gradient(180deg,#000 10%,transparent 92%);transition:opacity .6s}
 #amb[data-s=home] .a-art{opacity:0}
 #amb[data-s=read] .a-art{opacity:calc(var(--amb-art)*.8);height:62vh}
-#amb .a-mist{position:absolute;inset:-20%;background:var(--cloud) 0 0/760px;opacity:.16;filter:blur(3px);animation:drift 90s linear infinite;-webkit-mask-image:linear-gradient(180deg,#000,transparent 85%);mask-image:linear-gradient(180deg,#000,transparent 85%)}
+#amb .a-mist{position:absolute;inset:-20%;background:var(--cloud) 0 0/760px;opacity:.16;filter:blur(3px);-webkit-mask-image:linear-gradient(180deg,#000,transparent 85%);mask-image:linear-gradient(180deg,#000,transparent 85%)}
 :root:not([data-theme="dark"]) #amb .a-mist{opacity:.5;filter:blur(3px) brightness(1.6)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]):not([data-theme="sepia"]) #amb .a-mist{opacity:.16;filter:blur(3px)}}
-#amb .a-mist.m2{background-size:1100px;animation-duration:140s;animation-direction:reverse;opacity:.1;top:-5%}
-@keyframes drift{to{background-position:760px 220px}}
-#amb .a-motes{position:absolute;inset:0;opacity:.55;background:radial-gradient(circle,var(--g1) 0 1px,transparent 1.6px) 0 0/140px 170px,radial-gradient(circle,var(--g2) 0 1.2px,transparent 2px) 60px 90px/230px 200px,radial-gradient(circle,var(--g1) 0 .8px,transparent 1.4px) 30px 40px/310px 270px;animation:motes 60s linear infinite;-webkit-mask-image:linear-gradient(0deg,#000 20%,transparent);mask-image:linear-gradient(0deg,#000 20%,transparent);filter:drop-shadow(0 0 3px var(--glow))}
-@keyframes motes{to{background-position:20px -680px,90px -600px,0 -810px}}
+#amb .a-mist.m2{background-size:1100px;opacity:.1;top:-5%}
+#amb .a-motes{position:absolute;inset:0;opacity:.55;background:radial-gradient(circle,var(--g1) 0 1px,transparent 1.6px) 0 0/140px 170px,radial-gradient(circle,var(--g2) 0 1.2px,transparent 2px) 60px 90px/230px 200px,radial-gradient(circle,var(--g1) 0 .8px,transparent 1.4px) 30px 40px/310px 270px;-webkit-mask-image:linear-gradient(0deg,#000 20%,transparent);mask-image:linear-gradient(0deg,#000 20%,transparent);filter:drop-shadow(0 0 3px var(--glow))}
 #amb .a-grain{position:absolute;inset:0;background:var(--grain);opacity:var(--amb-grain)}
 @media(prefers-reduced-motion:reduce){#amb .a-mist,#amb .a-motes,.scr.on{animation:none}}
 
